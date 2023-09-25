@@ -13,6 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Get Current Date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
       - name: Run Build Dicts Script
         run: |
           chmod +x ./binaries/yomitan
@@ -20,9 +24,8 @@ jobs:
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: dst/*
-          tag_name: ${{ format('{0}-{1}-{2}', github.year, github.month, '01') }}
-          name: ${{ format('{0}-{1}-{2}', github.year, github.month, '01') }}
+          tag_name: ${{ steps.date.outputs.date }}
+          name: ${{ steps.date.outputs.date }}
+          token: ${{ secrets.GITHUB_TOKEN }}
