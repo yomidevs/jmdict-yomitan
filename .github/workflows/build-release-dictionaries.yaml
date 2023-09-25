@@ -1,0 +1,27 @@
+name: Build and Release Dictionaries Monthly
+
+on:
+  schedule:
+    - cron: '0 0 1 * *' # Runs at 00:00 (midnight) on the 1st day of every month
+  workflow_dispatch: # Allows manually triggering the workflow
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Build Dicts Script
+        run: |
+          bash build_dicts.sh
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: dst/*
+          tag_name: ${{ format('{0}-{1}-{2}', github.year, github.month, '01') }}
+          name: ${{ format('{0}-{1}-{2}', github.year, github.month, '01') }}
