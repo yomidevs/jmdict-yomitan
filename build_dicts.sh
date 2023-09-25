@@ -15,11 +15,11 @@ function refresh_source () {
 }
 
 refresh_source "JMdict_e_examp"
-./binaries/yomitan -language="english_extra" -title="JMdict" src/JMdict_e_examp dst/JMDict_english_with_examples.zip
+./binaries/yomitan -language="english_extra" -title="JMdict" src/JMdict_e_examp dst/JMdict_english_with_examples.zip
 
 refresh_source "JMdict"
 ./binaries/yomitan -language="english_extra" -title="JMdict"         src/JMdict dst/JMdict_english.zip
-./binaries/yomitan -language="english"   -title="JMdict (Legacy)"   src/JMdict dst/JMdict_english_legacy.zip
+./binaries/yomitan -language="english"   -title="JMdict (Legacy)"    src/JMdict dst/JMdict_english_legacy.zip
 ./binaries/yomitan -language="dutch"     -title="JMdict (Dutch)"     src/JMdict dst/JMdict_dutch.zip
 ./binaries/yomitan -language="french"    -title="JMdict (French)"    src/JMdict dst/JMdict_french.zip
 ./binaries/yomitan -language="german"    -title="JMdict (German)"    src/JMdict dst/JMdict_german.zip
