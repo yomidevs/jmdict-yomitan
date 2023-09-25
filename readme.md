@@ -8,6 +8,10 @@ This repository is updated monthly via a GitHub Action and is built from the JMd
 
 ## JMdict for Yomitan
 
+To see your current version of JMdict, hover over this entry:
+
+> ＪＭｄｉｃｔ
+
 - [JMdict English w/ example sentences](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMDict_english_with_examples.zip): This is the version of JMdict with example sentences from the [Tatoeba Project](http://tatoeba.org/home).
 - [JMdict English](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_english.zip): This is the same JMdict but without example sentences.
 - [JMdict English (Legacy)](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_english_legacy.zip): This is JMdict with legacy formatting. It is not recommended for use; see the FAQ below.
@@ -41,8 +45,12 @@ The terminology of "Extra" is confusing since it implies that the extra version 
 
 ### How Often Should I Update?
 
-- The **JMdict** project [is quite active](https://www.edrdg.org/jmwsgi/updates.py?svc=jmdict&i=1) so we recommend you update your JMdict files at least once a year - many entries are added and improved upon every single day by contributers. You can even [contribute yourself here](https://www.edrdg.org/jmwsgi/edhelpq.py?svc=jmdict&sid=).
+- The **JMdict** project [is quite active](https://www.edrdg.org/jmwsgi/updates.py?svc=jmdict&i=1) so we recommend you update your JMdict files every few months as lots of entries are added and improved upon every single day by contributers. You can even [contribute yourself here](https://www.edrdg.org/jmwsgi/edhelpq.py?svc=jmdict&sid=).
 
-- The **JMnedict** project is [also quite active](https://www.edrdg.org/jmwsgi/updates.py?svc=jmdict&i=1) although arguably less relevant. However, there is an old version of JMnedict from before it was [updated by stephenmk](https://github.com/FooSoft/yomichan-import/pull/41); the old version is structured in such a way that you get a lot of search bloat when searching any kanji or kana so we strongly recommend you download the newest JMnedict at least once.
+- The **JMnedict** project is [also somewhat active](https://www.edrdg.org/jmwsgi/updates.py?svc=jmdict&i=1) although arguably less relevant. However, there is an old version of JMnedict from before it was [updated by stephenmk](https://github.com/FooSoft/yomichan-import/pull/41); the old version is structured in such a way that you get a lot of search bloat when searching any kanji or kana so we strongly recommend you download the newest JMnedict at least once.
 
 - The **KANJIDIC** project [does not appear to be as active](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), so it is probably fine not to update it.
+
+## Acknowledgements
+
+This repository was heavily inspired by Aquafina-water-bottle's [JMdict for Yomichan](https://github.com/Aquafina-water-bottle/jmdict-english-yomichan) repository.
