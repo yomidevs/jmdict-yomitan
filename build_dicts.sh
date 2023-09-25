@@ -19,7 +19,7 @@ refresh_source "JMdict_e_examp"
 
 refresh_source "JMdict"
 ./binaries/yomitan -language="english_extra" -title="JMdict"         src/JMdict dst/JMdict_english.zip
-./binaries/yomitan -language="english"   -title="JMdict (English Legacy)"   src/JMdict dst/JMdict_english_legacy.zip
+./binaries/yomitan -language="english"   -title="JMdict (Legacy)"   src/JMdict dst/JMdict_english_legacy.zip
 ./binaries/yomitan -language="dutch"     -title="JMdict (Dutch)"     src/JMdict dst/JMdict_dutch.zip
 ./binaries/yomitan -language="french"    -title="JMdict (French)"    src/JMdict dst/JMdict_french.zip
 ./binaries/yomitan -language="german"    -title="JMdict (German)"    src/JMdict dst/JMdict_german.zip
@@ -29,13 +29,13 @@ refresh_source "JMdict"
 ./binaries/yomitan -language="spanish"   -title="JMdict (Spanish)"   src/JMdict dst/JMdict_spanish.zip
 ./binaries/yomitan -language="swedish"   -title="JMdict (Swedish)"   src/JMdict dst/JMdict_swedish.zip
 
-./binaries/yomitan -format="forms"       -title="JMdict Forms"       src/JMdict dst/jmdict_forms.zip
+./binaries/yomitan -format="forms"       -title="JMdict Forms"       src/JMdict dst/JMdict_forms.zip
 
 refresh_source "JMnedict.xml"
-./binaries/yomitan src/JMnedict.xml dst/jmnedict.zip
+./binaries/yomitan src/JMnedict.xml dst/JMnedict.zip
 
 refresh_source "kanjidic2.xml"
-./binaries/yomitan -language="english"    -title="KANJIDIC"              src/kanjidic2.xml dst/kanjidic_english.zip
-./binaries/yomitan -language="french"     -title="KANJIDIC (French)"     src/kanjidic2.xml dst/kanjidic_french.zip
-./binaries/yomitan -language="portuguese" -title="KANJIDIC (Portuguese)" src/kanjidic2.xml dst/kanjidic_portuguese.zip
-./binaries/yomitan -language="spanish"    -title="KANJIDIC (Spanish)"    src/kanjidic2.xml dst/kanjidic_spanish.zip
+./binaries/yomitan -language="english"    -title="KANJIDIC"              src/kanjidic2.xml dst/KANJIDIC_english.zip
+./binaries/yomitan -language="french"     -title="KANJIDIC (French)"     src/kanjidic2.xml dst/KANJIDIC_french.zip
+./binaries/yomitan -language="portuguese" -title="KANJIDIC (Portuguese)" src/kanjidic2.xml dst/KANJIDIC_portuguese.zip
+./binaries/yomitan -language="spanish"    -title="KANJIDIC (Spanish)"    src/kanjidic2.xml dst/KANJIDIC_spanish.zip
