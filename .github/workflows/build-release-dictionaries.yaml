@@ -29,3 +29,6 @@ jobs:
           tag_name: ${{ steps.date.outputs.date }}
           name: ${{ steps.date.outputs.date }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            This is an automated release of the dictionaries for ${{ steps.date.outputs.date }}.
+            For information on how to use these dictionaries, please see the [README](https://github.com/MarvNC/jmdict-yomitan).
