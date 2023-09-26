@@ -4,7 +4,7 @@
 
 This repository contains automatically generated dictionaries for use with [Yomitan](https://github.com/themoeway/yomitan)/[Yomichan](https://foosoft.net/projects/yomichan/), a free Japanese dictionary browser extension. They are built using information from the [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) project, which is a freely available Japanese dictionary maintained by the [Electronic Dictionary Research and Development Group](http://www.edrdg.org/). There are also releases for [JMnedict](https://www.edrdg.org/enamdict/enamdict_doc.html) and [KANJIDIC](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), which are respectively a Japanese proper names dictionary and a kanji dictionary.
 
-This repository is updated daily via a GitHub Action and is built from the JMdict project files using the [Yomitan Import](https://github.com/themoeway/yomitan-import) tool along with a `build_dicts.sh` script provided with the tool.
+This repository is automatically updated daily and the dictionary files are built from JMdict using the [Yomitan Import](https://github.com/themoeway/yomitan-import) tool.
 
 ## JMdict for Yomitan
 

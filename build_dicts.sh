@@ -1,3 +1,5 @@
+# This script is copied from https://github.com/themoeway/yomitan-import/blob/main/scripts/build_dicts.sh with little modifications.
+
 #!/bin/bash
 
 mkdir -p src
