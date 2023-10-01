@@ -62,3 +62,7 @@ The terminology of "Extra" is confusing since it implies that the extra version 
 ## Acknowledgements
 
 This repository was heavily inspired by Aquafina-water-bottle's [JMdict for Yomichan](https://github.com/Aquafina-water-bottle/jmdict-english-yomichan) repository.
+
+## License
+
+The code in this repository is licensed under the MIT license. The released dictionaries are licensed under the [Creative Commons Attribution-ShareAlike Licence (V4.0)](https://creativecommons.org/licenses/by-sa/4.0/) that [JMdict is](https://www.edrdg.org/edrdg/licence.html).
