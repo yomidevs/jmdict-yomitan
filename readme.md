@@ -12,6 +12,9 @@ The download links below will always point toward the latest release.
 
 ### JMdict for Yomitan
 
+> [!IMPORTANT]
+> Stephenmk who was heavily involved in creating these dictionaries has created [Jitendex](https://github.com/stephenmk/Jitendex), a further improved Yomichan dictionary built using information from the JMdict project as well as other projects, making the English JMdict in this repository obsolete. We recommend you try it out.
+
 To see your current version of JMdict, hover over this entry:
 
 > ＪＭｄｉｃｔ
