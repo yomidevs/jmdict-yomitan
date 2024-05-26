@@ -6,14 +6,25 @@ This repository contains automatically generated dictionaries for use with [Yomi
 
 This repository is automatically updated daily and the dictionary files are built from JMdict using the [Yomitan Import](https://github.com/themoeway/yomitan-import) tool.
 
+- [JMdict for Yomitan](#jmdict-for-yomitan)
+  - [Downloads](#downloads)
+    - [JMdict for Yomitan](#jmdict-for-yomitan-1)
+    - [JMnedict for Yomitan](#jmnedict-for-yomitan)
+    - [KANJIDIC for Yomitan](#kanjidic-for-yomitan)
+  - [FAQ](#faq)
+    - [Legacy vs Extra/Regular JMdict](#legacy-vs-extraregular-jmdict)
+    - [How Often Should I Update?](#how-often-should-i-update)
+  - [Acknowledgements](#acknowledgements)
+  - [License](#license)
+
 ## Downloads
 
 The download links below will always point toward the latest release.
 
 ### JMdict for Yomitan
 
-> [!IMPORTANT]
-> Stephenmk who was heavily involved in creating these dictionaries has created [Jitendex](https://github.com/stephenmk/Jitendex), a further improved Yomichan dictionary built using information from the JMdict project as well as other projects, making the English JMdict in this repository obsolete. We recommend you try it out.
+> [!WARNING]
+> The [Yomitan Import](https://github.com/themoeway/yomitan-import) tool is not actively maintained and as such, the versions of JMdict in this repository are [missing some data](https://github.com/themoeway/jmdict-yomitan/issues/6) that is present in JMdict. We recommend that you instead use [Jitendex](https://jitendex.org/), a further improved free JMdict-based dictionary created by Stephenmk, who had previously worked on Yomitan Import.
 
 To see your current version of JMdict, hover over this entry:
 
