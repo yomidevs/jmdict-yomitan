@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/github/v/tag/marvnc/jmdict-yomitan?style=for-the-badge&label=Last%20Release)
 
-This repository contains automatically generated dictionaries for use with [Yomitan](https://github.com/themoeway/yomitan)/[Yomichan](https://foosoft.net/projects/yomichan/), a free Japanese dictionary browser extension. They are built using information from the [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) project, which is a freely available Japanese dictionary maintained by the [Electronic Dictionary Research and Development Group](http://www.edrdg.org/). There are also releases for [JMnedict](https://www.edrdg.org/enamdict/enamdict_doc.html) and [KANJIDIC](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), which are respectively a Japanese proper names dictionary and a kanji dictionary.
+This repository contains automatically generated dictionaries for use with [Yomitan](https://github.com/themoeway/yomitan) (formerly [Yomichan](https://foosoft.net/projects/yomichan/)), a free Japanese dictionary browser extension. They are built using information from the [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) project, which is a freely available Japanese dictionary maintained by the [Electronic Dictionary Research and Development Group](http://www.edrdg.org/). There are also releases for [JMnedict](https://www.edrdg.org/enamdict/enamdict_doc.html) and [KANJIDIC](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), which are respectively a Japanese proper names dictionary and a kanji dictionary.
 
 This repository is automatically updated daily and the dictionary files are built from JMdict using the [Yomitan Import](https://github.com/themoeway/yomitan-import) tool.
 
@@ -70,7 +70,7 @@ The terminology of "Extra" is confusing since it implies that the extra version 
 
 ### How Often Should I Update?
 
-- The **JMdict** project [is quite active](https://www.edrdg.org/jmwsgi/updates.py?svc=jmdict&i=1) so we recommend you update your JMdict files every few months as lots of entries are added and improved upon every single day by contributers. You can even [contribute yourself here](https://www.edrdg.org/jmwsgi/edhelpq.py?svc=jmdict&sid=).
+- The **JMdict** project [is quite active](https://www.edrdg.org/jmwsgi/updates.py?svc=jmdict&i=1) so we recommend you update your JMdict files every few months as lots of entries are added and improved upon every single day by contributers. You can even [contribute to the project here](https://www.edrdg.org/jmwsgi/edhelpq.py?svc=jmdict&sid=).
 
 - The **JMnedict** project is [also somewhat active](https://www.edrdg.org/jmwsgi/updates.py?svc=jmdict&i=1) although arguably less relevant. However, there is an old version of JMnedict from before it was [updated by stephenmk](https://github.com/FooSoft/yomichan-import/pull/41); the old version is structured in such a way that you get a lot of search bloat when searching any kanji or kana so we strongly recommend you download the newest JMnedict at least once.
 
