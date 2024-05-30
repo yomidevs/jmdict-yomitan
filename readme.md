@@ -1,4 +1,4 @@
-# JMdict for Yomitan
+# JMdict for Yomitan <!-- omit in toc -->
 
 ![](https://img.shields.io/github/v/tag/marvnc/jmdict-yomitan?style=for-the-badge&label=Last%20Release)
 
@@ -6,16 +6,15 @@ This repository contains automatically generated dictionaries for use with [Yomi
 
 This repository is automatically updated daily and the dictionary files are built from JMdict using the [Yomitan Import](https://github.com/themoeway/yomitan-import) tool.
 
-- [JMdict for Yomitan](#jmdict-for-yomitan)
-  - [Downloads](#downloads)
-    - [JMdict for Yomitan](#jmdict-for-yomitan-1)
-    - [JMnedict for Yomitan](#jmnedict-for-yomitan)
-    - [KANJIDIC for Yomitan](#kanjidic-for-yomitan)
-  - [FAQ](#faq)
-    - [Legacy vs Extra/Regular JMdict](#legacy-vs-extraregular-jmdict)
-    - [How Often Should I Update?](#how-often-should-i-update)
-  - [Acknowledgements](#acknowledgements)
-  - [License](#license)
+- [Downloads](#downloads)
+  - [JMdict for Yomitan](#jmdict-for-yomitan)
+  - [JMnedict for Yomitan](#jmnedict-for-yomitan)
+  - [KANJIDIC for Yomitan](#kanjidic-for-yomitan)
+- [FAQ](#faq)
+  - [Legacy vs Extra/Regular JMdict](#legacy-vs-extraregular-jmdict)
+  - [How Often Should I Update?](#how-often-should-i-update)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
 ## Downloads
 
@@ -24,7 +23,7 @@ The download links below will always point toward the latest release.
 ### JMdict for Yomitan
 
 > [!IMPORTANT]
-> Stephenmk who had worked extensively on creating these dictionaries has now created [Jitendex](https://jitendex.org/), a further improved Yomitan dictionary built using JMdict and Tatoeba data. As such, the English JMdict in this repository is now obsolete. We recommend you try it out.
+> Stephenmk who had worked extensively on creating these dictionaries has now created [Jitendex](https://jitendex.org/), a further improved Yomitan dictionary built using JMdict and Tatoeba data. We recommend you try it out instead of the English JMdict in this repository."
 
 To see your current version of JMdict, hover over this entry:
 
