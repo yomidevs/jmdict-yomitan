@@ -23,8 +23,8 @@ The download links below will always point toward the latest release.
 
 ### JMdict for Yomitan
 
-> [!WARNING]
-> The [Yomitan Import](https://github.com/themoeway/yomitan-import) tool is not actively maintained and as such, the versions of JMdict in this repository are [missing some data](https://github.com/themoeway/jmdict-yomitan/issues/6) that is present in JMdict. We recommend that you instead use [Jitendex](https://jitendex.org/), a further improved free JMdict-based dictionary created by Stephenmk, who had previously worked on Yomitan Import.
+> [!IMPORTANT]
+> Stephenmk who had worked extensively on creating these dictionaries has now created [Jitendex](https://github.com/stephenmk/Jitendex), a further improved Yomitan dictionary built using JMdict and Tatoeba data. As such, the English JMdict in this repository is now obsolete. We recommend you try it out.
 
 To see your current version of JMdict, hover over this entry:
 
