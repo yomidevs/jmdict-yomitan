@@ -1,21 +1,20 @@
-# JMdict for Yomitan
+# JMdict for Yomitan <!-- omit in toc -->
 
 ![](https://img.shields.io/github/v/tag/marvnc/jmdict-yomitan?style=for-the-badge&label=Last%20Release)
 
-This repository contains automatically generated dictionaries for use with [Yomitan](https://github.com/themoeway/yomitan)/[Yomichan](https://foosoft.net/projects/yomichan/), a free Japanese dictionary browser extension. They are built using information from the [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) project, which is a freely available Japanese dictionary maintained by the [Electronic Dictionary Research and Development Group](http://www.edrdg.org/). There are also releases for [JMnedict](https://www.edrdg.org/enamdict/enamdict_doc.html) and [KANJIDIC](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), which are respectively a Japanese proper names dictionary and a kanji dictionary.
+This repository contains automatically generated dictionaries for use with [Yomitan](https://github.com/themoeway/yomitan) (formerly [Yomichan](https://foosoft.net/projects/yomichan/)), a free Japanese dictionary browser extension. They are built using information from the [JMdict](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) project, which is a freely available Japanese dictionary maintained by the [Electronic Dictionary Research and Development Group](http://www.edrdg.org/). There are also releases for [JMnedict](https://www.edrdg.org/enamdict/enamdict_doc.html) and [KANJIDIC](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project), which are respectively a Japanese proper names dictionary and a kanji dictionary.
 
 This repository is automatically updated daily and the dictionary files are built from JMdict using the [Yomitan Import](https://github.com/themoeway/yomitan-import) tool.
 
-- [JMdict for Yomitan](#jmdict-for-yomitan)
-  - [Downloads](#downloads)
-    - [JMdict for Yomitan](#jmdict-for-yomitan-1)
-    - [JMnedict for Yomitan](#jmnedict-for-yomitan)
-    - [KANJIDIC for Yomitan](#kanjidic-for-yomitan)
-  - [FAQ](#faq)
-    - [Legacy vs Extra/Regular JMdict](#legacy-vs-extraregular-jmdict)
-    - [How Often Should I Update?](#how-often-should-i-update)
-  - [Acknowledgements](#acknowledgements)
-  - [License](#license)
+- [Downloads](#downloads)
+  - [JMdict for Yomitan](#jmdict-for-yomitan)
+  - [JMnedict for Yomitan](#jmnedict-for-yomitan)
+  - [KANJIDIC for Yomitan](#kanjidic-for-yomitan)
+- [FAQ](#faq)
+  - [Legacy vs Extra/Regular JMdict](#legacy-vs-extraregular-jmdict)
+  - [How Often Should I Update?](#how-often-should-i-update)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
 ## Downloads
 
@@ -23,8 +22,8 @@ The download links below will always point toward the latest release.
 
 ### JMdict for Yomitan
 
-> [!WARNING]
-> The [Yomitan Import](https://github.com/themoeway/yomitan-import) tool is not actively maintained and as such, the versions of JMdict in this repository are [missing some data](https://github.com/themoeway/jmdict-yomitan/issues/6) that is present in JMdict. We recommend that you instead use [Jitendex](https://jitendex.org/), a further improved free JMdict-based dictionary created by Stephenmk, who had previously worked on Yomitan Import.
+> [!IMPORTANT]
+> Stephenmk who had worked extensively on creating these dictionaries has now created [Jitendex](https://jitendex.org/), a further improved Yomitan dictionary built using JMdict and Tatoeba data. We recommend you try it out instead of the English JMdict in this repository."
 
 To see your current version of JMdict, hover over this entry:
 
@@ -71,7 +70,7 @@ The terminology of "Extra" is confusing since it implies that the extra version 
 
 ### How Often Should I Update?
 
-- The **JMdict** project [is quite active](https://www.edrdg.org/jmwsgi/updates.py?svc=jmdict&i=1) so we recommend you update your JMdict files every few months as lots of entries are added and improved upon every single day by contributers. You can even [contribute yourself here](https://www.edrdg.org/jmwsgi/edhelpq.py?svc=jmdict&sid=).
+- The **JMdict** project [is quite active](https://www.edrdg.org/jmwsgi/updates.py?svc=jmdict&i=1) so we recommend you update your JMdict files every few months as lots of entries are added and improved upon every single day by contributers. You can even [contribute to the project here](https://www.edrdg.org/jmwsgi/edhelpq.py?svc=jmdict&sid=).
 
 - The **JMnedict** project is [also somewhat active](https://www.edrdg.org/jmwsgi/updates.py?svc=jmdict&i=1) although arguably less relevant. However, there is an old version of JMnedict from before it was [updated by stephenmk](https://github.com/FooSoft/yomichan-import/pull/41); the old version is structured in such a way that you get a lot of search bloat when searching any kanji or kana so we strongly recommend you download the newest JMnedict at least once.
 
@@ -84,3 +83,5 @@ This repository was heavily inspired by Aquafina-water-bottle's [JMdict for Yomi
 ## License
 
 The code in this repository is licensed under the MIT license. The released dictionaries are licensed under the [Creative Commons Attribution-ShareAlike Licence (V4.0)](https://creativecommons.org/licenses/by-sa/4.0/) that [JMdict is](https://www.edrdg.org/edrdg/licence.html).
+
+This repository uses the [JMdict/EDICT](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) and [KANJIDIC](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project) dictionary files. These files are the property of the [Electronic Dictionary Research and Development Group](https://www.edrdg.org/), and are used in conformance with the Group's licence.
