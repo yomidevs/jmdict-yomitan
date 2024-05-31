@@ -23,7 +23,7 @@ The download links below will always point toward the latest release.
 ### JMdict for Yomitan
 
 > [!IMPORTANT]
-> Stephenmk who had worked extensively on creating these dictionaries has now created [Jitendex](https://jitendex.org/), a further improved Yomitan dictionary built using JMdict and Tatoeba data. We recommend you try it out instead of the English JMdict in this repository."
+> Stephenmk who had worked extensively on creating these dictionaries has now created [Jitendex](https://jitendex.org/), a further improved Yomitan dictionary built using JMdict and Tatoeba data. We recommend you try it out instead of the English JMdict in this repository.
 
 To see your current version of JMdict, hover over this entry:
 
