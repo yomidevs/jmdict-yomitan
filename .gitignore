@@ -1,2 +1,10 @@
 dst
 src
+binaries
+
+JMdict.gz
+JMdict_e_examp.gz
+JMnedict.xml.gz
+kanjidic2.xml.gz
+
+yomitan-import-linux.zip
