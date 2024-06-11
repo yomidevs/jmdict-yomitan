@@ -1,2 +1,0 @@
-The current version of yomitan-export in this folder was built:
-25 September 2023
