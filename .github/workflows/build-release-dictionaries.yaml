@@ -19,7 +19,6 @@ jobs:
 
       - name: Run Build Dicts Script
         run: |
-          chmod +x ./binaries/yomitan
           bash build_dicts.sh
 
       - name: Create Release
