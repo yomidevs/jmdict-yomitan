@@ -10,6 +10,7 @@ if [ ! -f "binaries/yomitan" ]; then
     wget "https://github.com/themoeway/yomitan-import/releases/latest/download/yomitan-import-linux.zip"
     unzip -j "yomitan-import-linux.zip" -d binaries
 fi
+chmod +x ./binaries/yomitan
 
 function refresh_source () {
     NOW=$(date '+%s')
