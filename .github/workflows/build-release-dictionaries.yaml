@@ -15,14 +15,14 @@ jobs:
 
       - name: Get Current Date
         id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       - name: Run Build Dicts Script
         run: |
           bash build_dicts.sh
 
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: dst/*
           tag_name: ${{ steps.date.outputs.date }}
