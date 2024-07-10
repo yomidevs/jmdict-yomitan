@@ -22,7 +22,7 @@ jobs:
           bash build_dicts.sh
 
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: dst/*
           tag_name: ${{ steps.date.outputs.date }}
