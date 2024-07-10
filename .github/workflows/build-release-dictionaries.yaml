@@ -15,7 +15,7 @@ jobs:
 
       - name: Get Current Date
         id: date
-        run: echo "{name}=date::$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       - name: Run Build Dicts Script
         run: |
