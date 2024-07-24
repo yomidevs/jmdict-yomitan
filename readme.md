@@ -30,35 +30,35 @@ To see your current version of JMdict, hover over this entry:
 > ＪＭｄｉｃｔ
 
 - JMdict (English)
-  - [JMdict_english_with_examples.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_english_with_examples.zip)
+  - [JMdict_english_with_examples.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/JMdict_english_with_examples.zip)
     - This is the version of JMdict with example sentences from the [Tatoeba Project](http://tatoeba.org/home).
-  - [JMdict_english.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_english.zip)
+  - [JMdict_english.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/JMdict_english.zip)
     - This is the same JMdict but without example sentences.
-  - [JMdict_english_legacy.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_english_legacy.zip)
+  - [JMdict_english_legacy.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/JMdict_english_legacy.zip)
     - This is JMdict with legacy formatting. It is not recommended for use; see the FAQ below.
 - JMdict (Other Languages)
-  - [JMdict_dutch.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_dutch.zip)
-  - [JMdict_french.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_french.zip)
-  - [JMdict_german.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_german.zip)
-  - [JMdict_hungarian.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_hungarian.zip)
-  - [JMdict_russian.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_russian.zip)
-  - [JMdict_slovenian.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_slovenian.zip)
-  - [JMdict_spanish.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_spanish.zip)
-  - [JMdict_swedish.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_swedish.zip)
+  - [JMdict_dutch.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/JMdict_dutch.zip)
+  - [JMdict_french.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/JMdict_french.zip)
+  - [JMdict_german.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/JMdict_german.zip)
+  - [JMdict_hungarian.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/JMdict_hungarian.zip)
+  - [JMdict_russian.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/JMdict_russian.zip)
+  - [JMdict_slovenian.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/JMdict_slovenian.zip)
+  - [JMdict_spanish.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/JMdict_spanish.zip)
+  - [JMdict_swedish.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/JMdict_swedish.zip)
 - JMdict Forms
-  - [JMdict_forms.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMdict_forms.zip)
+  - [JMdict_forms.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/JMdict_forms.zip)
     - This is a version of JMdict that includes only the alternate forms of each entry. This is useful for conjugation lookup for those who do not wish to have any dictionary definitons, and is unnecessary if you are using the regular JMdict.
 
 ### JMnedict for Yomitan
 
-- [JMnedict.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/JMnedict.zip)
+- [JMnedict.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/JMnedict.zip)
 
 ### KANJIDIC for Yomitan
 
-- [KANJIDIC_english.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/KANJIDIC_english.zip)
-- [KANJIDIC_french.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/KANJIDIC_french.zip)
-- [KANJIDIC_portuguese.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/KANJIDIC_portuguese.zip)
-- [KANJIDIC_spanish.zip](https://github.com/MarvNC/jmdict-yomitan/releases/latest/download/KANJIDIC_spanish.zip)
+- [KANJIDIC_english.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/KANJIDIC_english.zip)
+- [KANJIDIC_french.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/KANJIDIC_french.zip)
+- [KANJIDIC_portuguese.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/KANJIDIC_portuguese.zip)
+- [KANJIDIC_spanish.zip](https://github.com/themoeway/jmdict-yomitan/releases/latest/download/KANJIDIC_spanish.zip)
 
 ## FAQ
 
