@@ -19,7 +19,7 @@ jobs:
 
       - name: Run Build Dicts Script
         run: |
-          bash build_dicts.sh
+          bash src/build_dicts.sh
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
