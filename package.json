@@ -1,7 +1,10 @@
 {
   "name": "jmdict-yomitan",
-  "module": "src/index.ts",
+  "module": "src/add_updates.ts",
   "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },

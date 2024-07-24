@@ -1,5 +1,6 @@
 dst
-src
+data
+tmp
 binaries
 
 JMdict.gz
