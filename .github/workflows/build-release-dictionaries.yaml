@@ -13,6 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
       - name: Get Current Date
         id: date
         run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
@@ -20,6 +23,10 @@ jobs:
       - name: Run Build Dicts Script
         run: |
           bash src/build_dicts.sh
+
+      - name: Add Updates
+        run: |
+          bun run start
 
       - name: Create Release
         uses: softprops/action-gh-release@v2

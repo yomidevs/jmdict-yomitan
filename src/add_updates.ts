@@ -5,6 +5,7 @@ import { readdir } from 'fs/promises';
 
 const URL_PREFIX =
   'https://github.com/themoeway/jmdict-yomitan/releases/latest/download/';
+const JSON_FILE = (dictName: string) => `${dictName}.json`;
 const JSON_URL = (dictName: string) => `${URL_PREFIX}${dictName}.json`;
 const ZIP_URL = (dictName: string) => `${URL_PREFIX}${dictName}.zip`;
 const DEST_DIR = 'dst';
@@ -28,6 +29,8 @@ for (const file of files) {
   indexJson.indexUrl = JSON_URL(dictName);
   indexJson.downloadUrl = ZIP_URL(dictName);
   await Bun.write(indexJsonPath, JSON.stringify(indexJson));
+  // Copy index.json to /dst and rename to JSON_FILE
+  await $`cp ${indexJsonPath} ${DEST_DIR}/${JSON_FILE(dictName)}`;
 
   // Zip archive back to zipPath at max compression
   await $`cd ${TMP_DIR} && zip -r -9 ${file} .`;
