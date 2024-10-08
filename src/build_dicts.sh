@@ -1,4 +1,4 @@
-# This script is copied from https://github.com/themoeway/yomitan-import/blob/main/scripts/build_dicts.sh with little modifications.
+# This script is copied from https://github.com/yomidevs/yomitan-import/blob/main/scripts/build_dicts.sh with little modifications.
 
 #!/bin/bash
 
@@ -7,7 +7,7 @@ mkdir -p dst
 mkdir -p binaries
 
 if [ ! -f "binaries/yomitan" ]; then
-    wget "https://github.com/themoeway/yomitan-import/releases/latest/download/yomitan-import-linux.zip"
+    wget "https://github.com/yomidevs/yomitan-import/releases/latest/download/yomitan-import-linux.zip"
     unzip -j "yomitan-import-linux.zip" -d binaries
 fi
 chmod +x ./binaries/yomitan
