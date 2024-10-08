@@ -4,7 +4,7 @@ import * as path from 'path';
 import { readdir } from 'fs/promises';
 
 const URL_PREFIX =
-  'https://github.com/themoeway/jmdict-yomitan/releases/latest/download/';
+  'https://github.com/yomidevs/jmdict-yomitan/releases/latest/download/';
 const JSON_FILE = (dictName: string) => `${dictName}.json`;
 const JSON_URL = (dictName: string) => `${URL_PREFIX}${dictName}.json`;
 const ZIP_URL = (dictName: string) => `${URL_PREFIX}${dictName}.zip`;
