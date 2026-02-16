@@ -4,6 +4,7 @@ tmp
 binaries
 
 JMdict.gz
+JMdict_b.gz
 JMdict_e_examp.gz
 JMnedict.xml.gz
 kanjidic2.xml.gz

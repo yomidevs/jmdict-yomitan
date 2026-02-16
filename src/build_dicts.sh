@@ -26,6 +26,10 @@ function refresh_source () {
 refresh_source "JMdict_e_examp"
 ./binaries/yomitan -language="english_extra" -title="JMdict" data/JMdict_e_examp dst/JMdict_english_with_examples.zip
 
+refresh_source "JMdict_b"
+./binaries/yomitan -language="english_extra" -format="edict" -title="JMdict"          data/JMdict_b dst/JMdict_english_without_proper_names.zip
+./binaries/yomitan -language="english"       -format="edict" -title="JMdict (Legacy)" data/JMdict_b dst/JMdict_english_legacy_without_proper_names.zip
+
 refresh_source "JMdict"
 ./binaries/yomitan -language="english_extra" -title="JMdict"         data/JMdict dst/JMdict_english.zip
 ./binaries/yomitan -language="english"   -title="JMdict (Legacy)"    data/JMdict dst/JMdict_english_legacy.zip
