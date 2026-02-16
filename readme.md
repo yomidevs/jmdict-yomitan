@@ -12,6 +12,7 @@ This repository is automatically updated daily and the dictionary files are buil
   - [KANJIDIC for Yomitan](#kanjidic-for-yomitan)
 - [FAQ](#faq)
   - [Legacy vs Extra/Regular JMdict](#legacy-vs-extraregular-jmdict)
+  - [JMdict English vs JMdict English Without Proper Names](#jmdict-english-vs-jmdict-english-without-proper-names)
   - [How Often Should I Update?](#how-often-should-i-update)
   - [漢字使い参考 vs JMdict Forms](#漢字使い参考-vs-jmdict-forms)
 - [Acknowledgements](#acknowledgements)
@@ -36,7 +37,11 @@ To see your current version of JMdict, hover over this entry:
   - [JMdict_english.zip](https://github.com/yomidevs/jmdict-yomitan/releases/latest/download/JMdict_english.zip)
     - This is the same JMdict but without example sentences.
   - [JMdict_english_legacy.zip](https://github.com/yomidevs/jmdict-yomitan/releases/latest/download/JMdict_english_legacy.zip)
-    - This is JMdict with legacy formatting. It is not recommended for use; see the FAQ below.
+    - This is JMdict with legacy formatting. It is not recommended for use; see the [FAQ](#legacy-vs-extraregular-jmdict) below.
+  - [JMdict_english_without_proper_names.zip](https://github.com/yomidevs/jmdict-yomitan/releases/latest/download/JMdict_english_without_proper_names.zip)
+    - This is `JMdict_english` but without several thousand entries from JMnedict. Recommended if you are using JMdict and JMnedict together; see the [FAQ](#jmdict-english-vs-jmdict-english-without-proper-names) below.
+  - [JMdict_english_legacy_without_proper_names.zip](https://github.com/yomidevs/jmdict-yomitan/releases/latest/download/JMdict_english_legacy_without_proper_names.zip)
+    - This is `JMdict_english_without_proper_names` but with the legacy formatting of `JMdict_english_legacy`.
 - JMdict (Other Languages)
   - [JMdict_dutch.zip](https://github.com/yomidevs/jmdict-yomitan/releases/latest/download/JMdict_dutch.zip)
   - [JMdict_french.zip](https://github.com/yomidevs/jmdict-yomitan/releases/latest/download/JMdict_french.zip)
@@ -68,6 +73,16 @@ To see your current version of JMdict, hover over this entry:
 The legacy JMdict for Yomitan is a version of JMdict for Yomichan with legacy formatting and with lots of information missing. The so-called "extra" version of JMdict was [introduced by stephenmk](https://github.com/FooSoft/yomichan-import/pull/40) to modernize the formatting and add vital missing information such as notes, type information, source languages, references, antonyms, other forms, and more.
 
 The terminology of "Extra" is confusing since it implies that the extra version is a marginal improvement to the legacy version, so we will just call it the "regular" JMdict. The legacy version is available for download as some third-party apps do not yet support new structured-content features, but we recommend using the regular version if possible as you will be missing out on a lot of important information otherwise.
+
+### JMdict English vs JMdict English Without Proper Names
+
+If you are using JMDict English and JMnedict together, it is recommended to use `JMdict_english_without_proper_names`.
+
+[Starting in 2023](https://github.com/JMdictProject/JMdictIssues/issues/94), JMdict began copying a subset of entries from JMnedict (~10k as of 2026) into its dictionary file as part of the default distribution process for JMdict English. As a result, if you are using both JMdict English and JMnedict in Yomitan and look up a proper name that has been copied over, such as 三貴, you will get duplicate results from both dictionaries.
+
+To solve this issue, a version of JMDict English without proper names is provided here that is built from a variation of JMdict English that skips partially copying entries from JMnedict (`JMdict_b` from [EDRDG](https://www.edrdg.org/wiki/Main_Page.html#Current_Version_&_Downloads)). Other languages are not affected, so do not have additional variations provided.
+
+However, an equivalent to `JMdict_english_with_examples` but without any JMnedict entries is not provided here as EDRDG does not currently publish a version of `JMdict_b` with examples to use as a source for it.
 
 ### How Often Should I Update?
 
