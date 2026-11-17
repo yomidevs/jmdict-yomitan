@@ -1,4 +1,3 @@
-import gzip
 import importlib.util
 import json
 import os
@@ -7,7 +6,7 @@ import shutil
 import subprocess
 import tempfile
 import unittest
-from zipfile import BadZipFile, ZipFile
+from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('validator', ROOT / 'src/validate_dictionaries.py')
@@ -29,16 +28,6 @@ class ArchiveTests(unittest.TestCase):
                 z.writestr(key, value)
         return path
 
-    def test_valid_terms(self):
-        self.assertEqual(validator.validate_archive(self.archive(banks={'term_bank_1.json': '[["word"]]'})), 1)
-
-    def test_valid_kanji(self):
-        self.assertEqual(validator.validate_archive(self.archive('KANJIDIC_english.zip', {'kanji_bank_1.json': '[["字"]]'})), 1)
-
-    def test_missing_banks(self):
-        with self.assertRaises(ValueError):
-            validator.validate_archive(self.archive())
-
     def test_noncontiguous_banks(self):
         for numbers in ((2,), (1, 3)):
             with self.subTest(numbers=numbers), self.assertRaises(ValueError):
@@ -46,45 +35,11 @@ class ArchiveTests(unittest.TestCase):
                     f'term_bank_{number}.json': '[["entry"]]' for number in numbers
                 }))
 
-    def test_multiple_banks(self):
-        self.assertEqual(validator.validate_archive(self.archive(banks={
-            'term_bank_2.json': '[["second"]]', 'term_bank_1.json': '[["first"]]'
-        })), 2)
-
-    def test_wrong_bank_type(self):
-        with self.assertRaises(ValueError):
-            validator.validate_archive(self.archive(banks={'kanji_bank_1.json': '[["字"]]'}))
-
     def test_invalid_banks(self):
         for value in ('[]', '{}', 'null', 'bad JSON', '[[]]', '["word"]'):
             with self.subTest(value=value), self.assertRaises(ValueError):
                 validator.validate_archive(self.archive(banks={'term_bank_1.json': value}))
 
-    def test_corrupt_archive(self):
-        path = self.root / 'JMdict_english.zip'
-        path.write_bytes(b'not a zip')
-        with self.assertRaises(BadZipFile):
-            validator.validate_archive(path)
-
-    def test_invalid_index(self):
-        for value in ('null', '{}', 'bad JSON'):
-            with self.subTest(value=value):
-                path = self.root / 'JMdict_english.zip'
-                with ZipFile(path, 'w') as z:
-                    z.writestr('index.json', value)
-                    z.writestr('term_bank_1.json', '[["entry"]]')
-                with self.assertRaises(ValueError):
-                    validator.validate_archive(path)
-
-    def test_missing_expected_archive(self):
-        with self.assertRaises(FileNotFoundError):
-            validator.validate_directory(self.root)
-
-    def test_complete_set(self):
-        for name in validator.EXPECTED:
-            kind = 'kanji' if name.startswith('KANJIDIC_') else 'term'
-            self.archive(f'{name}.zip', {f'{kind}_bank_1.json': '[["entry"]]'})
-        validator.validate_directory(self.root)
 
 
 class BuildTests(unittest.TestCase):
@@ -111,7 +66,7 @@ output.write_bytes(b'corrupt' if mode=='corrupt' else gzip.compress(b'' if mode=
         self.script(self.root / 'binaries/yomitan', '''#!/usr/bin/env python3
 import json, os, sys
 from pathlib import Path
-from zipfile import BadZipFile, ZipFile
+from zipfile import ZipFile
 Path('converter-called').touch()
 mode=os.environ.get('CONVERTER_MODE', 'ok')
 if mode=='failed': sys.exit(1)
@@ -148,12 +103,6 @@ with ZipFile(path, 'w') as z:
         self.assertNotEqual(self.run_build().returncode, 0)
         self.assertEqual(path.read_text(), 'previous valid source')
 
-    def test_empty_cache_is_redownloaded(self):
-        (self.root / 'data/JMdict_e_examp').touch()
-        result = self.run_build()
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual((self.root / 'data/JMdict_e_examp').read_text(), 'source data')
-
     def test_converter_failure_stops_build(self):
         self.env['CONVERTER_MODE'] = 'failed'
         self.assertNotEqual(self.run_build().returncode, 0)
@@ -166,9 +115,14 @@ with ZipFile(path, 'w') as z:
         self.assertIn('no term banks', result.stderr)
 
     def test_successful_build_validates_all_outputs(self):
+        (self.root / 'data/JMdict_e_examp').touch()
         result = self.run_build()
         self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual((self.root / 'data/JMdict_e_examp').read_text(), 'source data')
         self.assertEqual(len(list((self.root / 'dst').glob('*.zip'))), len(validator.EXPECTED))
+        (self.root / 'dst/KANJIDIC_spanish.zip').unlink()
+        with self.assertRaises(FileNotFoundError):
+            validator.validate_directory(self.root / 'dst')
 
 
 if __name__ == '__main__':

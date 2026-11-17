@@ -105,21 +105,3 @@ This repository was heavily inspired by Aquafina-water-bottle's [JMdict for Yomi
 The code in this repository is licensed under the MIT license. The released dictionaries are licensed under the [Creative Commons Attribution-ShareAlike Licence (V4.0)](https://creativecommons.org/licenses/by-sa/4.0/) that [JMdict is](https://www.edrdg.org/edrdg/licence.html).
 
 This repository uses the [JMdict/EDICT](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) and [KANJIDIC](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project) dictionary files. These files are the property of the [Electronic Dictionary Research and Development Group](https://www.edrdg.org/), and are used in conformance with the Group's licence.
-
-## Release validation
-
-The build fails if a source cannot be downloaded or decompressed into a nonempty
-file. Downloads use bounded retries and replace cached sources only after success.
-Every expected dictionary ZIP must contain nonempty JSON term banks (JMdict and
-JMnedict) or kanji banks (KANJIDIC). Validation runs after conversion and again
-after update metadata is added, before publishing. It checks structure and
-nonempty entries, not completeness relative to earlier releases.
-
-Run the offline regression suite with:
-
-```sh
-python3 -m unittest discover -s tests -v
-bash -n src/build_dicts.sh
-```
-
-Validate built dictionaries independently with `python3 src/validate_dictionaries.py dst`.
