@@ -22,6 +22,9 @@ jobs:
         id: date
         run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
+      - name: Test Release Guards
+        run: python3 -m unittest discover -s tests -v
+
       - name: Run Build Dicts Script
         run: |
           bash src/build_dicts.sh
@@ -29,6 +32,9 @@ jobs:
       - name: Add Updates
         run: |
           bun run start
+
+      - name: Validate Release Dictionaries
+        run: python3 src/validate_dictionaries.py dst
 
       - name: Create Release
         uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631 # 2.2.2
