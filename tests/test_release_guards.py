@@ -39,6 +39,18 @@ class ArchiveTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             validator.validate_archive(self.archive())
 
+    def test_noncontiguous_banks(self):
+        for numbers in ((2,), (1, 3)):
+            with self.subTest(numbers=numbers), self.assertRaises(ValueError):
+                validator.validate_archive(self.archive(banks={
+                    f'term_bank_{number}.json': '[["entry"]]' for number in numbers
+                }))
+
+    def test_multiple_banks(self):
+        self.assertEqual(validator.validate_archive(self.archive(banks={
+            'term_bank_2.json': '[["second"]]', 'term_bank_1.json': '[["first"]]'
+        })), 2)
+
     def test_wrong_bank_type(self):
         with self.assertRaises(ValueError):
             validator.validate_archive(self.archive(banks={'kanji_bank_1.json': '[["字"]]'}))

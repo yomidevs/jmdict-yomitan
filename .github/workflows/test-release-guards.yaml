@@ -1,0 +1,19 @@
+name: Test Release Guards
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check build script syntax
+        run: bash -n src/build_dicts.sh
+      - name: Test release guards without network or publishing
+        run: python3 -m unittest discover -s tests -v

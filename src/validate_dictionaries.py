@@ -28,6 +28,9 @@ def validate_archive(path):
         banks = [name for name in names if pattern.fullmatch(name)]
         if not banks:
             raise ValueError(f'{path.name}: no {bank_type} banks')
+        numbers = sorted(int(name.removesuffix('.json').rsplit('_', 1)[1]) for name in banks)
+        if numbers != list(range(1, len(banks) + 1)):
+            raise ValueError(f'{path.name}: missing or noncontiguous {bank_type} banks')
         count = 0
         for name in banks:
             entries = json.loads(archive.read(name))
