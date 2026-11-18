@@ -1,6 +1,7 @@
-# This script is copied from https://github.com/yomidevs/yomitan-import/blob/main/scripts/build_dicts.sh with little modifications.
-
 #!/bin/bash
+set -euo pipefail
+
+# This script is copied from https://github.com/yomidevs/yomitan-import/blob/main/scripts/build_dicts.sh with little modifications.
 
 mkdir -p data
 mkdir -p dst
@@ -13,14 +14,29 @@ fi
 chmod +x ./binaries/yomitan
 
 function refresh_source () {
-    NOW=$(date '+%s')
-    YESTERDAY=$((NOW - 86400)) # 86,400 seconds in 24 hours
-    if [ ! -f "data/$1" ]; then
-        wget "ftp.edrdg.org/pub/Nihongo/$1.gz"
-        gunzip -c "$1.gz" > "data/$1"
-    elif [[ $YESTERDAY -gt $(date -r "data/$1" '+%s') ]]; then
-        rsync "ftp.edrdg.org::nihongo/$1" "data/$1"
+    local source="$1"
+    local target="data/$source"
+    local yesterday=$(( $(date '+%s') - 86400 ))
+    if [[ -s "$target" ]] && [[ "$yesterday" -le $(date -r "$target" '+%s') ]]; then
+        return
     fi
+
+    # Keep the previous source intact until download and decompression succeed.
+    # A failed gunzip redirect must never leave an empty file in the cache.
+    local work
+    work=$(mktemp -d "data/.download.XXXXXX")
+    if ! wget --timeout=30 --tries=3 -O "$work/source.gz" "http://ftp.edrdg.org/pub/Nihongo/$source.gz"; then
+        rm -rf "$work"
+        echo "Failed to download $source" >&2
+        return 1
+    fi
+    if ! gunzip -c "$work/source.gz" > "$work/source" || [[ ! -s "$work/source" ]]; then
+        rm -rf "$work"
+        echo "Invalid or empty compressed source: $source" >&2
+        return 1
+    fi
+    mv "$work/source" "$target"
+    rm -rf "$work"
 }
 
 refresh_source "JMdict_e_examp"
@@ -52,3 +68,5 @@ refresh_source "kanjidic2.xml"
 ./binaries/yomitan -language="french"     -title="KANJIDIC (French)"     data/kanjidic2.xml dst/KANJIDIC_french.zip
 ./binaries/yomitan -language="portuguese" -title="KANJIDIC (Portuguese)" data/kanjidic2.xml dst/KANJIDIC_portuguese.zip
 ./binaries/yomitan -language="spanish"    -title="KANJIDIC (Spanish)"    data/kanjidic2.xml dst/KANJIDIC_spanish.zip
+
+python3 src/validate_dictionaries.py dst
