@@ -1,0 +1,31 @@
+name: Verify EDRDG HTTPS without publishing
+
+on:
+  push:
+    branches: [test/edrdg-https-nov28]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: oven-sh/setup-bun@v2
+      - name: Check build and guard tests
+        run: |
+          bash -n src/build_dicts.sh
+          python3 -m unittest discover -s tests -v
+      - name: Download five sources and build dictionaries
+        run: bash src/build_dicts.sh
+      - name: Generate update metadata
+        run: bun run start
+      - name: Validate all 19 release dictionaries
+        run: |
+          python3 src/validate_dictionaries.py dst
+          test "$(find dst -maxdepth 1 -name '*.zip' | wc -l)" -eq 19
+          test "$(find dst -maxdepth 1 -name '*.json' | wc -l)" -eq 19
