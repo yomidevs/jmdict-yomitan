@@ -25,7 +25,7 @@ function refresh_source () {
     # A failed gunzip redirect must never leave an empty file in the cache.
     local work
     work=$(mktemp -d "data/.download.XXXXXX")
-    if ! wget --timeout=30 --tries=3 -O "$work/source.gz" "http://ftp.edrdg.org/pub/Nihongo/$source.gz"; then
+    if ! wget --timeout=30 --tries=3 -O "$work/source.gz" "https://www.edrdg.org/pub/Nihongo/$source.gz"; then
         rm -rf "$work"
         echo "Failed to download $source" >&2
         return 1
